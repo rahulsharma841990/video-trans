@@ -51,7 +51,7 @@ export default function Home() {
             // Send video URL to local server for downloading
             try {
                 const downloadResponse = await axios.get(
-                    "http://localhost:5656/download",
+                    "http://157.245.85.71:5656/download",
                     {
                         params: {
                             url: videoLink,
@@ -80,7 +80,7 @@ export default function Home() {
     const getTranscript = async () => {
         try {
             const transcriptResponse = await axios.get(
-                "http://localhost:5656/transcript"
+                "http://157.245.85.71:5656/transcript"
             );
             if (transcriptResponse.data.success) {
                 setTranscript(transcriptResponse.data.transcription);
